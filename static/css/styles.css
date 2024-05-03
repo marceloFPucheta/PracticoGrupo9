@@ -1,0 +1,122 @@
+/* styles.css */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito',sans-serif;
+}
+
+
+header{
+
+    background-color: #f2f2f2;
+    color: #fff;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    height: 0px;
+    
+ }
+
+ body{  
+
+    padding-top: 110px;
+
+ }
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 0px;
+    width: 99%;
+    padding: 50px 10px;
+    background-color: #f2f2f2;
+    position: fixed;
+
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color:#000000;
+}
+
+.nav-links a:hover{
+    color: green ;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Estilos de Flexbox */
+nav {
+    background-color: #f2f2f2;
+}
+
+main {
+
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    align-content: space-between;
+    margin-left: 0px;
+    display: inline-block;
+}
+
+#banner{
+    background-image: url('../img/banner-fb.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px; 
+}
+
+#indexImg{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+/* Media Queries para dispositivos */
+
+@media only screen and (min-width: 320px) {
+    /* Celular */
+    main {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* Tablet */
+    main {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /* PC escritorio */
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

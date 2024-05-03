@@ -1,0 +1,103 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/870c30ac6e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('contactForm').addEventListener('submit', function (event) {
+                var form = event.target;
+                var isValid = true;
+    
+                // Verifica campos obligatorios
+                form.querySelectorAll('[required]').forEach(function (input) {
+                    if (!input.value.trim()) {
+                        isValid = false;
+                    }
+                });
+    
+                if (!isValid) {
+                    alert('Por favor, complete todos los campos obligatorios.');
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+    <title>Contacto</title>
+</head>
+
+
+<header class="header">
+    <div class="navbar">
+      </div>
+      
+    <nav>
+        <!-- Logo -->
+
+        <div id="logo">
+            <a href="/">
+                <img src="/static/img/logo-fonobus-1.png" alt="Fono Bus">
+            </a>
+        </div>
+
+        <!-- Items Menu -->
+        <ul class="nav-links">
+            
+            <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Inicio</a></li>
+            <li><a href="/templates/acerca.html"><i class="fa-solid fa-bus"></i>Acerca</a></li>
+            <li><a href="/templates/contacto.html"><i class="fa fa-fw fa-envelope"></i>Contacto</a></li>
+        
+        </ul>
+    </nav>
+</header>
+
+
+
+
+<body>
+
+    <form id="contactForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+    
+        <label for="motivo">Motivo de contacto:</label>
+        <select id="motivo" name="motivo" required>
+            <option value="">Seleccione</option>
+            <option value="Consulta">Consulta</option>
+            <option value="Comentario">Comentario</option>
+            <option value="Solicitud">Solicitud</option>
+        </select>
+    
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+    
+        <label>
+            <input type="checkbox" name="suscripcion"> Suscribirse a nuestro boletín
+        </label>
+    
+        <label for="adjunto">Adjuntar imagen:</label>
+        <input type="file" id="adjunto" name="adjunto" accept="image/*" required>
+    
+        <input type="submit" value="Enviar">
+    </form>
+    
+
+    
+</body>
+</html>
+
