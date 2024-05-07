@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/870c30ac6e.js" crossorigin="anonymous"></script>
+        
+    <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
+    <title>Grupo Fono Bus</title>
+    
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script type="text/javascript" src="/static/js/JSCarousel.js"></script>
+
+</head>
+<body>
+<header class="header">
+        <!-- <div class="navbar"></div> -->
+        <nav>
+            <!-- logo -->
+            <div id="logo">
+                <a href="/">
+                    <img src="/static/img/logo-fonobus-1.png" alt="Fono Bus">
+                </a>
+            </div>
+        
+            <!-- Hipervinculos para el menu -->
+            <ul class="nav-links">
+                <li>
+                    <a href="/">
+                        <i class="fa fa-fw fa-home"></i>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/templates/acerca.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Acerca</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/templates/pasajes.html">
+                        <i class="fa-solid fa-bus"></i>
+                        <span>Pasajes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/templates/contacto.html">
+                        <i class="fa fa-fw fa-envelope"></i>
+                        <span>Contacto</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header> 
+    <main class="contenedorMainPasajes">
+        <div class="contenedorPasajes">
+        <div class="buscadorPasajes">
+            <div class="contenedorBuscar">
+                <input id="pasajeABuscar" type="text" class="estiloInput" size="40" maxlength="40">
+                <button type="button" onclick="buscarSerie()" class="estiloBoton">BUSCAR</button>
+            </div>
+        </div>
+        <div>
+            <table class="tablaPasajes">
+                    <thead class="">
+                        <tr class="">
+                            <th class="">#</th>
+                            <th class="">Destino</th>
+                            <th class="">Salida</th>
+                            <th class="">Tipo viaje</th>
+                            <th class="">Pasajeros</th>
+                        </tr>
+                    </thead>
+                    <tbody class="" id="tablaSeries">
+                        <tr id="serie">
+                            <td class="table-checkbox">
+                                <input type="radio" name="seleccionar" onclick="buscarSeleccionado()">
+                            </td>
+                            <td id="">Mar del Plata</td>
+                            <td>Liniers</td>
+                            <td>
+                                <select id="tipoViaje" name="tipoViaje" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="Ida">Ida</option>
+                                    <option value="IdaVuelta">Ida y vuelta</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="number" id="cantPasajes" name="cantPasajes" min="1" max="10" value="1"/>
+                            </td>
+                        </tr>
+                        <tr id="serie">
+                            <td class="table-checkbox">
+                                <input type="radio" name="seleccionar" onclick="buscarSeleccionado()">
+                            </td>
+                            <td id="" class="">Cordoba</td>
+                            <td>Moron</td>
+                            <td>
+                                <select id="tipoViaje" name="tipoViaje" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="Ida">Ida</option>
+                                    <option value="IdaVuelta">Ida y vuelta</option>
+                                </select>    
+                            </td>
+                            <td>
+                                <input type="number" id="cantPasajes" name="cantPasajes" min="1" max="10" value="1"/>
+                            </td>
+                        </tr>
+                        <tr id="serie" name="filaSerie">
+                            <td class="table-checkbox">
+                                <input type="radio" name="seleccionar" onclick="buscarSeleccionado()">
+                            </td>
+                            <td id="">Rosario</td>
+                            <td>Moron</td>
+                            <td>
+                                <select id="tipoViaje" name="tipoViaje" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="Ida">Ida</option>
+                                    <option value="IdaVuelta">Ida y vuelta</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="number" id="cantPasajes" name="cantPasajes" min="1" max="10" value="1"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+        <div class="contenedorBotonComprar">
+            <button type="button" onclick="" class="estiloBoton">COMPRAR</button>
+        </div>
+        </div>
+    </main> 
+    
+</body>
+</html>

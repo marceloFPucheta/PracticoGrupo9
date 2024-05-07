@@ -1,16 +1,15 @@
-
-
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/870c30ac6e.js" crossorigin="anonymous"></script>
+        
+    <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
+    <title>Grupo Fono Bus</title>
+    
     <link rel="stylesheet" href="/static/css/styles.css">
+    <script type="text/javascript" src="/static/js/JSCarousel.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -32,39 +31,50 @@
             });
         });
     </script>
-    <title>Contacto</title>
+
+
+
 </head>
-
-
-<header class="header">
-    <div class="navbar">
-      </div>
-      
-    <nav>
-        <!-- Logo -->
-
-        <div id="logo">
-            <a href="/">
-                <img src="/static/img/logo-fonobus-1.png" alt="Fono Bus">
-            </a>
-        </div>
-
-        <!-- Items Menu -->
-        <ul class="nav-links">
-            
-            <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Inicio</a></li>
-            <li><a href="/templates/acerca.html"><i class="fa-solid fa-bus"></i>Acerca</a></li>
-            <li><a href="/templates/contacto.html"><i class="fa fa-fw fa-envelope"></i>Contacto</a></li>
-        
-        </ul>
-    </nav>
-</header>
-
-
-
-
 <body>
-
+<header class="header">
+        <!-- <div class="navbar"></div> -->
+        <nav>
+            <!-- logo -->
+            <div id="logo">
+                <a href="/">
+                    <img src="/static/img/logo-fonobus-1.png" alt="Fono Bus">
+                </a>
+            </div>
+        
+            <!-- Hipervinculos para el menu -->
+            <ul class="nav-links">
+                <li>
+                    <a href="/">
+                        <i class="fa fa-fw fa-home"></i>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/templates/acerca.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Acerca</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/templates/pasajes.html">
+                        <i class="fa-solid fa-bus"></i>
+                        <span>Pasajes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/templates/contacto.html">
+                        <i class="fa fa-fw fa-envelope"></i>
+                        <span>Contacto</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>  
     <form id="contactForm">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
@@ -94,10 +104,11 @@
         <input type="file" id="adjunto" name="adjunto" accept="image/*" required>
     
         <input type="submit" value="Enviar">
-    </form>
-    
-
-    
+    </form>  
 </body>
 </html>
+
+    {% comment %} <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% endcomment %}
+
+
 

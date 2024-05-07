@@ -8,7 +8,6 @@
 
 
 header{
-
     background-color: #f2f2f2;
     color: #fff;
     position: fixed;
@@ -17,14 +16,7 @@ header{
     width: 100%;
     z-index: 9999;
     height: 0px;
-    
- }
-
- body{  
-
-    padding-top: 110px;
-
- }
+}
 
 nav{
     display: flex;
@@ -35,16 +27,29 @@ nav{
     padding: 50px 10px;
     background-color: #f2f2f2;
     position: fixed;
+}
 
+#logo img{
+    width: 40%;
+    min-width: 30vw;
+    height: auto;
 }
 
 .nav-links{
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
+
     list-style: none;
     gap: 30px;
+    width: 50%;
 }
 
 .nav-links a{
+    align-items: center;
     text-decoration: none;
     color:#000000;
 }
@@ -53,6 +58,9 @@ nav{
     color: green ;
 }
 
+.nav-links a i{
+    margin-right: 0.20vw;
+}
 
 ul {
     list-style-type: none;
@@ -66,9 +74,14 @@ a {
 }
 
 /* Estilos de Flexbox */
-nav {
-    background-color: #f2f2f2;
-}
+
+
+body{  
+
+    padding-top: 110px;
+
+ }
+
 
 main {
 
@@ -94,6 +107,111 @@ main {
     flex-direction: column;
 
 }
+
+/*######################################*/
+/*PASAJES*/
+/*######################################*/
+
+.contenedorMainPasajes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: normal;
+
+    margin-top: 8%;
+}
+
+.contenedorPasajes{
+    /*background-color: aquamarine;*/
+    width: 50%;
+    height: auto;
+
+    padding: 1%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: normal;
+}
+
+.buscadorPasajes{
+    /*background-color: blue;*/
+    
+    width: 100%;
+    height: auto;
+
+    margin: 1% 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: normal;
+}
+
+.contenedorBuscar{
+    display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: normal;
+}
+
+.contenedorBotonComprar{
+    /*background-color: blue;*/
+    
+    width: 100%;
+    height: auto;
+
+    margin: 1% 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: normal;
+}
+
+.estiloInput{
+    margin: 1%;
+    padding: 1.5%;
+    border-radius: 12vh;
+}
+
+.estiloBoton{
+    padding: 1.5%;
+    border-radius: 8vh;
+    cursor: pointer;
+    /*CAMBIAR CUANDO SE BUSQUE EL ESTILO*/
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.estiloBoton:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tablaPasajes{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tablaPasajes thead{
+    background-color: #333;
+    color:#fff;
+}
+
+.tablaPasajes th, td {
+            border: 1px solid #020202;
+            padding: 8px;
+            text-align: center;
+        }
 
 /* Media Queries para dispositivos */
 
