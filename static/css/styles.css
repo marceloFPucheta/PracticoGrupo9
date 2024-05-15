@@ -32,9 +32,36 @@ nav{
 
 #logo img{
     width: 40%;
-    min-width: 30vw;
+    min-width: 15vw;
     height: auto;
 }
+#logo:hover {
+
+    animation: scale-down-center;
+        -webkit-animation: scale-down-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation: scale-down-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+    @-webkit-keyframes scale-down-center {
+        0% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+        100% {
+          -webkit-transform: scale(0.7);
+                  transform: scale(1.5);
+        }
+      }
+      @keyframes scale-down-center {
+        0% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+        100% {
+          -webkit-transform: scale(0.7);
+                  transform: scale(0.7);
+        }
+      }
 
 .nav-links{
     display: flex;
@@ -482,6 +509,108 @@ main {
 .campoFormulario input[type="submit"]:hover {
     background-color: rgba(0, 128, 0, 0.5);
 }
+
+
+
+/*Contacto 2 nuevo */
+
+
+.wrap {
+    margin: 15px;
+    max-width: 600px;
+    width: 100%;
+    }
+    .wrap form {
+    box-shadow: 0 1px 3px rgba(0,0,0,.3);
+    }
+    .form-header {
+    background-color: green;
+    border-radius: 4px 4px 0 0;
+    padding: 1em;
+    }
+    .form-header h2 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.75em;
+    margin: 0;
+    }
+    .form-body {
+    background-color: #fff;
+    padding: 1em;
+    }
+    .form-body label,
+    .form-body input,
+    .form-body select,
+    .form-body textarea {
+    display: block;
+    width: 100%;
+    }
+    .form-body label {
+    font-size: .8em;
+    font-weight: 700;
+    line-height: 1;
+    margin: .75em 0 .25em;
+    }
+    .form-body input,
+    .form-body select,
+    .form-body textarea {
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 4px;
+    padding: .25em;
+    }
+    .form-body fieldset {
+    border: none;
+    margin: 0 0 1em;
+    padding: 0;
+    }
+    .form-body fieldset:last-of-type {
+    margin-bottom: 0;
+    }
+    .form-body fieldset legend {
+    font-size: 1.25em;
+    font-weight: 700;
+    }
+    .form-footer {
+    background-color: #e2e2e2;
+    border-radius: 0 0 4px 4px;
+    padding: 1em;
+    }
+    .form-footer input[type="submit"] {
+    background-color: green;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 1em 1.5em;
+    }
+    /******** Subscription option actions ********/
+    .sub-opts input[name="subscription"] {
+    display: none;
+    }
+    .sub-opts input[name="subscription"] + .sub-opt {
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    font-weight: 700;
+    }
+    .sub-opts input[name="subscription"]:checked + .sub-opt {
+    background-color: green;
+    color: #fff;
+    }
+    .sub-opts input[name="subscription"] + .sub-opt .sub-label .fa {
+    display: none;
+    }
+    .sub-opts input[name="subscription"]:checked + .sub-opt .sub-label .fa {
+    display: inline-block;
+    }
+    .sub-opts .sub-opt .sub-label {
+    display: block;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 1em;
+    }
+    .sub-opts .sub-opt .sub-label span.price {
+    display: inline-block;
+    }
 
 /* Media Queries para dispositivos */
 
