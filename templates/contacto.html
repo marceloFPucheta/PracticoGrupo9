@@ -57,7 +57,7 @@
                 <li>
                     <a href="/templates/acerca.html">
                         <i class="fa-solid fa-user"></i>
-                        <span>Acerca</span>
+                        <span>Nosotros</span>
                     </a>
                 </li>
                 <li>
@@ -75,40 +75,51 @@
             </ul>
         </nav>
     </header>  
-    <form id="contactForm">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-    
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-    
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" required>
-    
-        <label for="motivo">Motivo de contacto:</label>
-        <select id="motivo" name="motivo" required>
-            <option value="">Seleccione</option>
-            <option value="Consulta">Consulta</option>
-            <option value="Comentario">Comentario</option>
-            <option value="Solicitud">Solicitud</option>
-        </select>
-    
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" required></textarea>
-    
-        <label>
-            <input type="checkbox" name="suscripcion"> Suscribirse a nuestro boletín
-        </label>
-    
-        <label for="adjunto">Adjuntar imagen:</label>
-        <input type="file" id="adjunto" name="adjunto" accept="image/*" required>
-    
-        <input type="submit" value="Enviar">
-    </form>  
+    <main>
+        <h1 class="tituloContacto">Contactanos</h1>
+        <form class="formularioContacto">
+        <div class="campoFormulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="campoFormulario">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>        
+        <div class="campoFormulario">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+        </div>
+        <div class="campoFormulario">
+            <label for="motivo">Motivo de contacto:</label>
+            <select id="motivo" name="motivo" required>
+                <option value="">Seleccione</option>
+                <option value="Consulta">Consulta</option>
+                <option value="Comentario">Comentario</option>
+                <option value="Solicitud">Solicitud</option>
+            </select>
+        </div>   
+        <div class="campoFormulario">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+        </div>        
+        <div class="campoFormulario">
+            <label>
+                <input type="checkbox" name="suscripcion"> Suscribirse a nuestro boletín
+            </label>
+        </div>
+        <div class="campoFormulario">
+            <label for="adjunto">Adjuntar imagen:</label>
+            <input type="file" id="adjunto" name="adjunto" accept="image/*" required>
+        </div>
+        <div class="campoFormulario">
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+    </main>
+      
 </body>
 </html>
-
-    {% comment %} <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% endcomment %}
 
 
 

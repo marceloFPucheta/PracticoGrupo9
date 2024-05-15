@@ -6,6 +6,7 @@
     font-family: 'Nunito',sans-serif;
 }
 
+/*HEADER*/
 
 header{
     background-color: #f2f2f2;
@@ -73,9 +74,7 @@ a {
     color: #333;
 }
 
-/* Estilos de Flexbox */
-
-
+/*BODY*/
 body{  
 
     padding-top: 110px;
@@ -93,11 +92,12 @@ main {
     display: inline-block;
 }
 
-#banner{
-    background-image: url('../img/banner-fb.jpg');
+#bannerInicio{
+    background-image: url('/static/img/bannerInicio.jpg');
     background-size: cover;
     background-position: center;
-    height: 600px; 
+    width: 100%;
+    height: 400px;
 }
 
 #indexImg{
@@ -120,7 +120,7 @@ main {
     align-items: center;
     align-content: normal;
 
-    margin-top: 8%;
+    margin-top: 1%;
 }
 
 .contenedorPasajes{
@@ -208,19 +208,292 @@ main {
 }
 
 .tablaPasajes th, td {
-            border: 1px solid #020202;
-            padding: 8px;
-            text-align: center;
-        }
+    border: 1px solid #020202;
+    padding: 8px;
+    text-align: center;
+}
+
+/*######################################*/
+/*NOSOTROS*/
+/*######################################*/
+.contenedorHistoriaFoto{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: normal;
+}
+
+.contenedorHistoria{
+    width: 50%;
+    /* arriba | derecha | abajo | izquierda */
+    padding: 0% 0% 1% 1%;
+    
+}
+
+.contenedorHistoria h1{
+    display: flex;
+    justify-content: center; 
+    padding: 1%;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 6vh;
+}
+
+.contenedorHistoria p{
+    text-align: center;
+    padding: 0.5%;  
+    font-family:Arial, Helvetica, sans-serif;  
+    font-size: 3vh;   
+}
+
+.contenedorImagenHistoria{
+    width: 50%;
+    padding: 1%;
+    display: flex;
+    justify-content: center;   
+}
+
+.contenedorUnidades{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: normal;
+}
+
+.descripcionUnidades{
+    /* arriba | derecha | abajo | izquierda */
+    padding: 3% 25% 2% 25%;
+    
+}
+
+.descripcionUnidades h1{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 6vh;
+}
+
+.descripcionUnidades p{
+    padding: 0.5%;
+    text-align: center; 
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 3vh; 
+}
+.contenedorImagenesUnidades{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.contenedorImagenesUnidades img{
+    width: 80%;
+}
+
+/*######################################*/
+/*INICIO*/
+/*######################################*/
+ /*Carrusel*/
+.contenedorCarruselBotones{
+    position: relative;
+    overflow: hidden; 
+}
+
+.contenedorImagenes {
+    display: flex; 
+    width: 100%;
+    
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
+}
+
+.imagenCarrusel{
+    width: 100%;
+}
+
+.contenedorBotones{
+    background-color: rgb(0, 0, 0, 0);
+    width: 100%;
+    height:auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+        
+}
+
+.prev-btn, .next-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: white; 
+    color: black; 
+}
+
+.contenedorMetodosPagos{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-top: 1%;
+}
+
+.contenedorMetodosPagos img{
+    width: 90%;
+}
+
+/*PROMOCIONES*/
+.promocionesInicio{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.tarjetaPromo{
+    width: 100%;
+    padding: 1%;
+    border-style: solid;
+    border-color: green;
+    border-width: 2px;   
+}
+
+.cuerpoTarjeta {
+    position: relative;
+    overflow: hidden; 
+}
+
+.comprarPromo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.cuerpoTarjeta:hover .comprarPromo {
+    opacity: 1; 
+}
+
+.tarjetaPromo a:hover .cuerpoTarjeta .comprarPromo {
+    opacity: 1;
+}
+
+.tarjetaPromo:hover img {
+    filter: blur(2px);
+}
+
+.promosGrid{
+    padding: 1%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+/*VIDEOS*/
+.inicioVideos{
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 10%;
+}
+
+.lineaSeparadora {
+    border: none;
+    border-top: 2px solid green;
+    margin: 20px 0;
+    
+}
+
+/*######################################*/
+/*CONTACTO*/
+/*######################################*/
+.tituloContacto{
+    text-align: center;
+}
+
+.formularioContacto {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 1%;
+    margin-bottom: 2%;
+    border: green solid 2px;
+}
+
+.campoFormulario {
+    margin-bottom: 20px;
+}
+
+.campoFormulario label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.campoFormulario input[type="text"],
+.campoFormulario input[type="email"],
+.campoFormulario input[type="tel"],
+.campoFormulario select,
+.campoFormulario textarea,
+.campoFormulario input[type="checkbox"] {
+    width: 95%;
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.campoFormulario textarea {
+    resize: vertical;
+}
+
+.campoFormulario input[type="checkbox"] {
+    width: auto;
+    display: inline-block;
+}
+
+.campoFormulario input[type="submit"] {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.campoFormulario input[type="submit"]:hover {
+    background-color: rgba(0, 128, 0, 0.5);
+}
 
 /* Media Queries para dispositivos */
 
-@media only screen and (min-width: 320px) {
-    /* Celular */
+@media only screen and (min-width: 1024px) {
+    /* PC escritorio */
     main {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
     }
+
+   
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -231,10 +504,14 @@ main {
     }
 }
 
-@media only screen and (min-width: 1024px) {
-    /* PC escritorio */
+
+@media only screen and (min-width: 320px) {
+    /* Celular */
     main {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }
+
+
+
