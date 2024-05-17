@@ -323,6 +323,133 @@ main {
     width: 80%;
 }
 
+
+
+/*######################################*/
+/*CONTACTO*/
+/*######################################*/
+
+/*Contacto 2 nuevo */
+
+.mainContacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    width: 50%;
+    padding: 2%;
+    
+    /*margin: 15px;
+    max-width: 600px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);*/
+    }
+    .wrap form {
+    box-shadow: 0 1px 3px rgba(0,0,0,.3);
+    }
+    .form-header {
+    background-color: green;
+    border-radius: 4px 4px 0 0;
+    padding: 1em;
+    }
+    .form-header h2 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.75em;
+    margin: 0;
+    }
+    .form-body {
+    background-color: #fff;
+    padding: 1em;
+    }
+    .form-body label,
+    .form-body input,
+    .form-body select,
+    .form-body textarea {
+    display: block;
+    width: 100%;
+    }
+    .form-body label {
+    font-size: .8em;
+    font-weight: 700;
+    line-height: 1;
+    margin: .75em 0 .25em;
+    }
+    .form-body input,
+    .form-body select,
+    .form-body textarea {
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 4px;
+    padding: .25em;
+    }
+    .form-body fieldset {
+    border: none;
+    margin: 0 0 1em;
+    padding: 0;
+    }
+    .form-body fieldset:last-of-type {
+    margin-bottom: 0;
+    }
+    .form-body fieldset legend {
+    font-size: 1.25em;
+    font-weight: 700;
+    }
+    .form-footer {
+    background-color: #e2e2e2;
+    border-radius: 0 0 4px 4px;
+    padding: 1em;
+    }
+    .form-footer input[type="submit"] {
+    background-color: green;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 1em 1.5em;
+    }
+    /******** Subscription option actions ********/
+    .sub-opts input[name="subscription"] {
+    display: none;
+    }
+    .sub-opts input[name="subscription"] + .sub-opt {
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    font-weight: 700;
+    }
+    .sub-opts input[name="subscription"]:checked + .sub-opt {
+    background-color: green;
+    color: #fff;
+    }
+    .sub-opts input[name="subscription"] + .sub-opt .sub-label .fa {
+    display: none;
+    }
+    .sub-opts input[name="subscription"]:checked + .sub-opt .sub-label .fa {
+    display: inline-block;
+    }
+    .sub-opts .sub-opt .sub-label {
+    display: block;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 1em;
+    }
+    .sub-opts .sub-opt .sub-label span.price {
+    display: inline-block;
+    }
+
+/* Media Queries para dispositivos */
+
+@media only screen and (min-width: 1024px) {
+    /* PC escritorio */
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
 /*######################################*/
 /*INICIO*/
 /*######################################*/
@@ -432,7 +559,7 @@ main {
 .promosGrid{
     padding: 1%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);/*repeat(auto-fit, minmax(300px, 1fr));*/
     grid-gap: 20px;
 }
 
@@ -440,8 +567,25 @@ main {
 .inicioVideos{
     padding: 2%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(2, 1fr);/*minmax(400px, 1fr));*/
     grid-gap: 10%;
+}
+
+.contenedorVideo{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;    
+}
+
+.contenedorVideo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .lineaSeparadora {
@@ -451,205 +595,470 @@ main {
     
 }
 
-/*######################################*/
-/*CONTACTO*/
-/*######################################*/
-/*
-.tituloContacto{
+/*FOOTER*/
+.estiloFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 1%;
+}
+
+.localizacion{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
     text-align: center;
+    align-items: center;
 }
 
-.formularioContacto {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 10px;
-    width: 70%;
-    margin: 0 auto;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 1%;
-    margin-bottom: 2%;
-    border: green solid 2px;
+.localizacion p{
+    color:#f2f2f2
 }
 
-.campoFormulario {
-    margin-bottom: 20px;
+.localizacion iframe{
+    padding: 1%;
 }
 
-.campoFormulario label {
-    display: block;
-    margin-bottom: 5px;
+.contenedorRedes{
+    width: 50%;
+    text-align: center; 
 }
 
-.campoFormulario input[type="text"],
-.campoFormulario input[type="email"],
-.campoFormulario input[type="tel"],
-.campoFormulario select,
-.campoFormulario textarea,
-.campoFormulario input[type="checkbox"] {
-    width: 95%;
-    max-width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+.contenedorRedes i{
+    font-size: calc(5px + 2vw);
 }
 
-.campoFormulario textarea {
-    resize: vertical;
+.contenedorRedes h2{
+    color: #f2f2f2;
 }
 
-.campoFormulario input[type="checkbox"] {
-    width: auto;
-    display: inline-block;
+.contenedorEnlacesRedes{
+    padding: 3%;
+    display: flex;
+    justify-content: space-around;
 }
 
-.campoFormulario input[type="submit"] {
-    background-color: green;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
+.contenedorRedes i{
+    font-size: calc(5px + 4vw);
 }
 
-.campoFormulario input[type="submit"]:hover {
-    background-color: rgba(0, 128, 0, 0.5);
-}
 
-*/
-
-/*Contacto 2 nuevo */
-
-
-.wrap {
-    margin: 15px;
-    max-width: 600px;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-    }
-    .wrap form {
-    box-shadow: 0 1px 3px rgba(0,0,0,.3);
-    }
-    .form-header {
-    background-color: green;
-    border-radius: 4px 4px 0 0;
-    padding: 1em;
-    }
-    .form-header h2 {
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.75em;
-    margin: 0;
-    }
-    .form-body {
-    background-color: #fff;
-    padding: 1em;
-    }
-    .form-body label,
-    .form-body input,
-    .form-body select,
-    .form-body textarea {
-    display: block;
-    width: 100%;
-    }
-    .form-body label {
-    font-size: .8em;
-    font-weight: 700;
-    line-height: 1;
-    margin: .75em 0 .25em;
-    }
-    .form-body input,
-    .form-body select,
-    .form-body textarea {
-    background-color: #f4f4f4;
-    border: none;
-    border-radius: 4px;
-    padding: .25em;
-    }
-    .form-body fieldset {
-    border: none;
-    margin: 0 0 1em;
-    padding: 0;
-    }
-    .form-body fieldset:last-of-type {
-    margin-bottom: 0;
-    }
-    .form-body fieldset legend {
-    font-size: 1.25em;
-    font-weight: 700;
-    }
-    .form-footer {
-    background-color: #e2e2e2;
-    border-radius: 0 0 4px 4px;
-    padding: 1em;
-    }
-    .form-footer input[type="submit"] {
-    background-color: green;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    padding: 1em 1.5em;
-    }
-    /******** Subscription option actions ********/
-    .sub-opts input[name="subscription"] {
-    display: none;
-    }
-    .sub-opts input[name="subscription"] + .sub-opt {
-    background-color: #f4f4f4;
-    border-radius: 4px;
-    font-weight: 700;
-    }
-    .sub-opts input[name="subscription"]:checked + .sub-opt {
-    background-color: green;
-    color: #fff;
-    }
-    .sub-opts input[name="subscription"] + .sub-opt .sub-label .fa {
-    display: none;
-    }
-    .sub-opts input[name="subscription"]:checked + .sub-opt .sub-label .fa {
-    display: inline-block;
-    }
-    .sub-opts .sub-opt .sub-label {
-    display: block;
-    cursor: pointer;
-    font-size: 1em;
-    padding: 1em;
-    }
-    .sub-opts .sub-opt .sub-label span.price {
-    display: inline-block;
-    }
-
-/* Media Queries para dispositivos */
-
-@media only screen and (min-width: 1024px) {
-    /* PC escritorio */
-    main {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-   
 
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
     /* Tablet */
     main {
         flex-direction: row;
         justify-content: space-around;
     }
+
+/*######################################*/
+/*INICIO*/
+/*######################################*/
+/*Carrusel*/
+.contenedorCarruselBotones{
+    position: relative;
+    overflow: hidden; 
+}
+
+.contenedorImagenes {
+    display: flex; 
+    width: 100%;
+    
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
+}
+
+.imagenCarrusel{
+    width: 100%;
+}
+
+.contenedorBotones{
+    background-color: rgb(0, 0, 0, 0);
+    width: 100%;
+    height:auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+        
+}
+
+.prev-btn, .next-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: white; 
+    color: black; 
+}
+
+.contenedorMetodosPagos{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-top: 1%;
+}
+
+.contenedorMetodosPagos img{
+    width: 90%;
+}
+
+/*PROMOCIONES*/
+.promocionesInicio{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.tarjetaPromo{
+    width: 100%;
+    padding: 1%;
+    border-style: solid;
+    border-color: green;
+    border-width: 2px;  
+    box-sizing: border-box; 
+}
+
+.promosGrid{
+    padding: 1%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /*(auto-fit, minmax(300px, 1fr));*/
+    grid-gap: 20px;
+    box-sizing: border-box;
+}
+
+.cuerpoTarjeta {
+    position: relative;
+    overflow: hidden; 
+}
+
+.comprarPromo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.cuerpoTarjeta:hover .comprarPromo {
+    opacity: 1; 
+}
+
+.tarjetaPromo a:hover .cuerpoTarjeta .comprarPromo {
+    opacity: 1;
+}
+
+.tarjetaPromo:hover img {
+    filter: blur(2px);
+}
+
+/*VIDEOS*/
+.inicioVideos{
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);/*minmax(400px, 1fr));*/
+    grid-gap: 10%;
+}
+
+.contenedorVideo{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;    
+}
+
+.contenedorVideo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.lineaSeparadora {
+    border: none;
+    border-top: 2px solid green;
+    margin: 20px 0;  
+}
+
+/*FOOTER*/
+.estiloFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 1%;
+}
+
+.localizacion{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+
+.localizacion p{
+    color:#f2f2f2
+}
+
+.localizacion iframe{
+    padding: 1%;
+}
+
+.contenedorRedes{
+    width: 50%;
+    text-align: center; 
+}
+
+.contenedorRedes i{
+    font-size: calc(5px + 2vw);
+}
+
+.contenedorRedes h2{
+    color: #f2f2f2;
+}
+
+.contenedorEnlacesRedes{
+    padding: 3%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenedorRedes i{
+    font-size: calc(5px + 4vw);
+}
+
 }
 
 
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 767px) {
     /* Celular */
     main {
         flex-direction: row;
         justify-content: space-around;
     }
+
+/*######################################*/
+/*INICIO*/
+/*######################################*/
+/*Carrusel*/
+.contenedorCarruselBotones{
+    position: relative;
+    overflow: hidden; 
+}
+
+.contenedorImagenes {
+    display: flex; 
+    width: 100%;
+    
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
+}
+
+.imagenCarrusel{
+    width: 100%;
+}
+
+.contenedorBotones{
+    background-color: rgb(0, 0, 0, 0);
+    width: 100%;
+    height:auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+        
+}
+
+.prev-btn, .next-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: white; 
+    color: black; 
+}
+
+.contenedorMetodosPagos{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-top: 1%;
+}
+
+.contenedorMetodosPagos img{
+    width: 90%;
+}
+
+/*PROMOCIONES*/
+.promocionesInicio{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.promosGrid{
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    box-sizing: border-box;
+}
+
+.tarjetaPromo{
+    width: 100%;
+    padding: 1%;
+    border-style: solid;
+    border-color: green;
+    border-width: 2px; 
+    box-sizing: border-box;  
+}
+
+.cuerpoTarjeta {
+    position: relative;
+    overflow: hidden; 
+}
+
+.comprarPromo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.cuerpoTarjeta:hover .comprarPromo {
+    opacity: 1; 
+}
+
+.tarjetaPromo a:hover .cuerpoTarjeta .comprarPromo {
+    opacity: 1;
+}
+
+.tarjetaPromo:hover img {
+    filter: blur(2px);
+}
+
+/*VIDEOS*/
+.inicioVideos{
+    height: 100%;
+    width: auto;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2%;
+}
+
+.contenedorVideo{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.contenedorVideo iframe {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.lineaSeparadora {
+    border: none;
+    border-top: 2px solid green;
+    margin: 20px 0;  
+}
+
+/*FOOTER*/
+.estiloFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 1%;
+}
+
+.localizacion{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+}
+
+.localizacion p{
+    color:#f2f2f2
+}
+
+.localizacion iframe{
+    padding: 1%;
+}
+
+.contenedorRedes{
+    padding-top: 3%;
+    padding-bottom: 1%;
+    width: 100%;
+    text-align: center; 
+}
+
+.contenedorRedes i{
+    font-size: calc(5px + 2vw);
+}
+
+.contenedorRedes h2{
+    color: #f2f2f2;
+}
+
+.contenedorEnlacesRedes{
+    padding: 3%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenedorRedes i{
+    font-size: calc(5px + 8vw);
+}
+
+
+
 }
 
 
