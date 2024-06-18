@@ -440,6 +440,12 @@ main {
     .sub-opts .sub-opt .sub-label span.price {
     display: inline-block;
     }
+    .error {
+        color: red;
+        font-size: 0.875em;
+        margin-top: 5px;
+    }
+
 
 /* Media Queries para dispositivos */
 
