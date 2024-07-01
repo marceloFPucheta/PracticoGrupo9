@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="/./static/css/styles.css">
     <link rel="stylesheet" href="/./static/css/crud-movies.css">
 
-    <script type="text/javascript" src="/./static/js/inicio.js"></script> 
+    <script type="text/javascript" src="/./static/js/inicio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/./static/js/crud-movies-fetch.js"></script>    
 </head>
 <body>
     <header class="header">
@@ -61,38 +63,61 @@
         </nav>
     </header>
 
-
-    <main class="contenedorMainPasajes">
-        <div class="contenedorPasajes">
-            <h1>Elegi tu destino</h1>
-        <div class="buscadorPasajes">
-            <div class="contenedorBuscar">
-                <input id="pasajeABuscar" type="text" class="estiloInput" size="40" maxlength="40">
-                <button type="button" onclick="buscarPasaje()" class="estiloBoton">BUSCAR</button>
-            </div>
-        </div>
-        <div>
-            <table class="tablaPasajes">
-                    <thead class="">
-                        <tr class="">
-                            <th class="">#</th>
-                            <th class="">Destino</th>
-                            <th class="">Salida</th>
-                            <th class="">Tipo viaje</th>
-                            <th class="">Pasajeros</th>
-                        </tr>
-                    </thead>
-                    <tbody class="" id="tablaPasajesCuerpo">
+    <main class="mainContacto">
+        <div class="wrap">
+            <form id="contactForm">
+                <div class="form-header">
+                    <h2>Contacto</h2>
+                </div>
+                <div class="form-body">
+                    <fieldset>
+                        <legend><i class="fa fa-user"></i> Informacion Personal</legend>
                         
-                    </tbody>
-                </table>
+                        <label for="title">Nombre</label>
+                        <input type="text" class="input-search" name="title" id="title">
+                    
+                        <label for="director">Direccion</label>
+                        <input type="text" class="input-search" name="director" id="director">
+                        
+                        <label for="release-date">Fecha Nacimiento</label>
+                        <input type="date" class="input-search" name="release_date" id="release-date">
+
+                        <label for="banner">Foto Carnet</label>
+                        <input type="url" class="input-search" name="banner" id="banner-form">
+                        
+        
+                    </fieldset>
+    
+                </div>
+                <div class="form-footer">
+                    <input type="hidden"  name="id" id="id-movie">
+                    <button class="btn-cac" type="button" id="btn-save-movie">Agregar</button>                
+                </div>
+            </form>
         </div>
-        <div class="contenedorBotonComprar">
-            <button type="button" onclick="comprarPasaje()" class="estiloBoton">COMPRAR</button>
-        </div>
-        </div>
-    </main> 
-    <footer class="estiloFooter">
+
+        <section id="list" class="container">
+            <h3 class="subtitle">Listado de peliculas</h3>
+            <table id="list-table-movies" class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Direccion</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Foto Carnet</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-table-movies">
+                    
+                </tbody>
+            </table>
+        </section>  
+
+    </main>
+
+
+<footer class="estiloFooter">
     <div class="localizacion">
         <div class="direccionTelefono">
             <p>Pte. Gral. Juan Domingo Peron 380 - Cordoba</p>
@@ -115,6 +140,5 @@
         </div>
     </div>
 </footer>
-
 </body>
 </html>
