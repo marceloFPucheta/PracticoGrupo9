@@ -32,7 +32,8 @@ async function fetchData(url, method, data = null) {
  * un registro de pelicula
  * @returns 
  */
-async function saveMovie(){
+async function saveMovie()
+{
   const idMovie = document.querySelector('#id-movie').value;
   const title = document.querySelector('#title').value;
   const director = document.querySelector('#director').value;
@@ -111,7 +112,7 @@ async function showMovies(){
  */
 function deleteMovie(id){
   Swal.fire({
-      title: "Esta seguro de eliminar la pelicula?",
+      title: "Esta seguro de eliminar el abonado?",
       showCancelButton: true,
       confirmButtonText: "Eliminar",
   }).then(async (result) => {
