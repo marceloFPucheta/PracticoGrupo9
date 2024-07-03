@@ -94,7 +94,7 @@ async function showMovies(){
                   <td>${movie.director}</td>
                   <td>${movie.release_date}</td>
                   <td>
-                      <img src="${movie.banner}" width="30%">
+                      <img src="${movie.banner}" width="100%">
                   </td>
                   <td>
                       <button class="btn-cac" onclick='updateMovie(${movie.id_movie})'><i class="fa fa-pencil" ></button></i>
