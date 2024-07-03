@@ -1062,10 +1062,31 @@ main {
 .contenedorRedes i{
     font-size: calc(5px + 8vw);
 }
-
-
-
 }
 
 
+.btn-cac{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    color:black;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: bold;
+}
 
+/* Pseudoclases */
+.btn-cac:hover{
+    color: green;
+    
+}
+
+
+#btn-save-movie
+{
+    background-color: green;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 1em 1.5em;
+}
