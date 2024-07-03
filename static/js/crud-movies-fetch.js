@@ -62,10 +62,10 @@ async function saveMovie()
   let result = null;
   // Si hay un idMovie, realiza una petición PUT para actualizar la película existente
   if(idMovie!==""){
-    result = await fetchData(`${BASEURL}/api/movies/${idMovie}`, 'PUT', movieData);
+    result = await fetchData(`${BASEURL}/api/abono/${idMovie}`, 'PUT', movieData);
   }else{
     // Si no hay idMovie, realiza una petición POST para crear una nueva película
-    result = await fetchData(`${BASEURL}/api/movies/`, 'POST', movieData);
+    result = await fetchData(`${BASEURL}/api/abono/`, 'POST', movieData);
   }
   
   const formMovie = document.querySelector('#form-movie');
@@ -85,7 +85,7 @@ async function saveMovie()
  * por medio del uso de template string de JS.
  */
 async function showMovies(){
-  let movies =  await fetchData(BASEURL+'/api/movies/', 'GET');
+  let movies =  await fetchData(BASEURL+'/api/abono/', 'GET');
   const tableMovies = document.querySelector('#list-table-movies tbody');
   tableMovies.innerHTML='';
   movies.forEach((movie,index) => {
@@ -117,7 +117,7 @@ function deleteMovie(id){
       confirmButtonText: "Eliminar",
   }).then(async (result) => {
       if (result.isConfirmed) {
-        let response = await fetchData(`${BASEURL}/api/movies/${id}`, 'DELETE');
+        let response = await fetchData(`${BASEURL}/api/abono/${id}`, 'DELETE');
         showMovies();
         Swal.fire(response.message, "", "success");
       }
@@ -133,7 +133,7 @@ function deleteMovie(id){
  */
 async function updateMovie(id){
   //Buscamos en el servidor la pelicula de acuerdo al id
-  let response = await fetchData(`${BASEURL}/api/movies/${id}`, 'GET');
+  let response = await fetchData(`${BASEURL}/api/abono/${id}`, 'GET');
   const idMovie = document.querySelector('#id-movie');
   const title = document.querySelector('#title');
   const director = document.querySelector('#director');
