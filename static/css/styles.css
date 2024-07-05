@@ -30,7 +30,7 @@ nav{
     align-items: center;
     height: 0px;
     width: 99%;
-    padding: 50px 10px;
+    padding: 30px 10px;
     background-color: #f5f5f5;
     position: fixed;
 }
@@ -109,7 +109,7 @@ a {
 /*BODY*/
 body{  
 
-    padding-top: 10px;
+    padding-top: 30px;
 
  }
 
