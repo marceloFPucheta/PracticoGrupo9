@@ -94,7 +94,7 @@ async function showMovies(){
                   <td>${movie.director}</td>
                   <td>${movie.release_date}</td>
                   <td>
-                      <img src="${movie.banner}" width="100%">
+                      <img src="${movie.banner}" width="35%">
                   </td>
                   <td>
                       <button class="btn-cac" onclick='updateMovie(${movie.id_movie})'><i class="fa fa-pencil" ></button></i>
@@ -122,6 +122,7 @@ function deleteMovie(id){
         Swal.fire(response.message, "", "success");
       }
   });
+  showMovies();
   
 }
 
